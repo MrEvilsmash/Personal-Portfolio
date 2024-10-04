@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Experience - Sv Akash</title>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <a href="index.html" class="logo">Sv Akash</a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="service.html">Services</a>
+            <a href="skills.html">Skills</a>
+            <a href="education.html">Education</a>
+            <a href="experience.html">Experience</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Experience Section -->
+    <section class="experience">
+        <h1 class="vtn">Professional Experience</h1>
+        <div class="experience-list">
+            <div class="experience-item">
+                <h2>Front-End Developer Intern</h2>
+                <h3>Techoctanet Pvt Ltd</h3>
+                <p>June 2024 - Present</p>
+                <ul>
+                    <li>Developed responsive web pages using HTML, CSS, and JavaScript.</li>
+                    <li>Collaborated with the design team to implement user-friendly interfaces.</li>
+                    <li>Optimized web applications for maximum speed and scalability.</li>
+                </ul>
+            </div>
+            <div class="experience-item">
+                <h2>Freelance Web Developer</h2>
+                <h3>Self-Employed</h3>
+                <p>January 2023 - May 2024</p>
+                <ul>
+                    <li>Built custom websites for clients, ensuring SEO best practices and mobile responsiveness.</li>
+                    <li>Worked with clients to understand their needs and deliver tailored solutions.</li>
+                    <li>Maintained and updated websites post-launch to enhance user experience.</li>
+                </ul>
+            </div>
+            <!-- Add more experience items as needed -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer__bar">
+            <p>© 2024 Sv Akash. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script>
+        let lastScrollTop = 0; // Variable to store the last scroll position
+        const navbar = document.querySelector('header');
+
+        window.addEventListener('scroll', function () {
+            const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (currentScroll > lastScrollTop) {
+                // User is scrolling down
+                navbar.style.top = '-80px'; // Adjust this value based on your navbar height
+            } else {
+                // User is scrolling up
+                navbar.style.top = '0'; // Show the navbar
+            }
+            lastScrollTop = currentScroll; // Update last scroll position
+        });
+    </script>
+</body>
+
+</html>

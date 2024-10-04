@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Portfolio Website</title>
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo">Sv Akash</a>
+
+        <nav>
+            <a href="https://ak-portfolio-sigma.vercel.app/"> Home</a>
+            <a href="Service.html">Services</a>
+            <a href="skills.html">Skills</a>
+            <a href="education.html">Education</a>
+            <a href="experience.html">Experience</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <section class="home">
+        <div class="home-img">
+            <img src="main.jpg" alt="">
+        </div>
+        <div class="home-content">
+            <h1>Hi, It's <span>Sv Akash</span></h1>
+            <h3 class="typing-text">I'm a <span></span></h3>
+            <p>I'm a front-end developer who turns creative ideas into engaging web experiences. With strong skills in HTML, CSS, and JavaScript, I build responsive, user-friendly websites. Passionate about clean code and continuous learning, I’m dedicated to delivering high-quality results and solving complex challenges.</p>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/akash-sv-326566276/"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/MrEvilsmash"><i class="fa-brands fa-github"></i></a>
+                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            <a href="#" class="btn">Hire me</a>
+        </div>
+    </section>
+    <section>
+        <div class="home-content">
+            <h3 class="rtn">Projects</h3>
+        </div>
+        <div class="btrn">
+            <div class="projects">
+            <div class="project-box">
+                <img src="project1.jpg" alt="Traveller website">
+                <p>Traveller website</p>
+                <div class="destination__details">
+                    <p class="destination__title">Landing page</p>
+                    <p class="destination__subtitle">Traveller Website</p>
+                </div>
+                <div class="overlay"></div>
+            </div>
+
+            <div class="project-box">
+                <img src="project2.jpg" alt="Todo list">
+                <div class="destination__details">
+                    <p class="destination__title">Web Application</p>
+                    <p class="destination__subtitle">To-Do List</p>
+                </div>
+                <div class="overlay"></div>
+            </div>
+            <div class="project-box">
+                <img src="pro3.jpg" alt="Restaurent Website">
+                <div class="destination__details">
+                    <p class="destination__title"></p>
+                    <p class="destination__subtitle">Restaurant website</p>
+                </div>
+                <div class="overlay"></div>
+            </div>
+        </div>
+        </div>
+        <div class="home-content">
+            <h3 class="ctn">Certifications</h3>
+            <div class="btrn">
+                <div class="projects">
+                    <div class="project-box">
+                        <img src="octanet - Copy.jpg" alt="">
+                        <div class="destination__details">
+                            <p class="destination__title"></p>
+                            <p class="destination__subtitle">Web Development</p>
+                        </div>
+                        <div class="overlay"></div>
+                    </div>
+                </div>   
+                <div class="projects">
+                    <div class="project-box">
+                        <img src="html.jpg" alt="">
+                        <div class="destination__details">
+                            <p class="destination__title"></p>
+                            <p class="destination__subtitle">HTML Course</p>
+                        </div>
+                        <div class="overlay"></div>
+                    </div>
+                </div>  
+                     
+            </div>
+
+        </div>
+        
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer__bar">
+            <h1>Copyright @ 2024 AkashSv. All Rights Reserved</h1>
+        </div>
+    </footer>
+
+    <script>
+        // Function to check if an element is in the viewport
+        function isInViewport(element) {
+            const rect = element.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
+
+        // Function to handle scroll event
+        function handleScroll() {
+            const projectBoxes = document.querySelectorAll('.project-box');
+
+            projectBoxes.forEach(box => {
+                if (isInViewport(box)) {
+                    box.classList.add('hidden');
+                } else {
+                    box.classList.remove('hidden');
+                }
+            });
+        }
+
+        // Event listener for scroll
+        window.addEventListener('scroll', handleScroll);
+
+        // Initial check in case elements are already in view on load
+        document.addEventListener('DOMContentLoaded', handleScroll);
+
+        let lastScrollTop = 0; // Variable to store the last scroll position
+        const navbar = document.querySelector('header');
+
+        window.addEventListener('scroll', function () {
+            const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (currentScroll > lastScrollTop) {
+                // User is scrolling down
+                navbar.style.top = '-80px'; // Hide the navbar (adjust height as necessary)
+            } else {
+                // User is scrolling up
+                navbar.style.top = '0'; // Show the navbar
+            }
+            lastScrollTop = currentScroll; // Update last scroll position
+        });
+    </script>
+
+</body>
+
+</html>

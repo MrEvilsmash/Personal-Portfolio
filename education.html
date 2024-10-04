@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Education - Sv Akash</title>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <a href="index.html" class="logo">Sv Akash</a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="service.html">Services</a>
+            <a href="skills.html">Skills</a>
+            <a href="education.html">Education</a>
+            <a href="experience.html">Experience</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Education Section -->
+    <section class="education">
+        <h1 class="btn">My Education</h1>
+        <div class="education-list">
+            <div class="education-item">
+                <h2>Bachelor of Engineering in Computer Science</h2>
+                <p>Aalim Muhammed Salegh College of Engineering, 2021 - 2025</p>
+                <p><b>CGPA</b>  7.9</p>
+            </div>
+            <div class="education-item">
+                <h2>Computer Science Group </h2>
+                <p>Bharathi Mat Hr Sec School, 2020 - 2021</p>
+                <p>79.9%</p>
+            </div>
+            <div class="education-item">
+                <h2>Computer Science Group </h2>
+                <p>Dr.Viamala Convent Mat Hr Sec School, 2020 - 2021</p>
+                <p>65.5</p>
+            </div>
+            <div class="education-item">
+                <p>Dr.Vimala Convent Mat Hr Sec School, 2020 - 2021</p>
+                <p>72.60</p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer__bar">
+            <p>© 2024 Sv Akash. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script>
+        let lastScrollTop = 0; // Variable to store the last scroll position
+        const navbar = document.querySelector('header');
+
+        window.addEventListener('scroll', function () {
+            const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (currentScroll > lastScrollTop) {
+                // User is scrolling down
+                navbar.style.top = '-80px'; // Adjust this value based on your navbar height
+            } else {
+                // User is scrolling up
+                navbar.style.top = '0'; // Show the navbar
+            }
+            lastScrollTop = currentScroll; // Update last scroll position
+        });
+    </script>
+</body>
+
+</html>
